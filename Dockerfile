@@ -17,5 +17,6 @@ RUN pip3 install ansible
 # Install hosts file template and Ansible playbook for exit nodes
 RUN git clone https://github.com/althea-net/rita-installer.git
 
- # Expose Port for the Application 
-EXPOSE 4875 51820
+ # Expose Ports for babel, rita, bounty and wg
+EXPOSE 8080 4876/udp 8888/udp 59999/udp
+EXPOSE 60000-65000/udp
