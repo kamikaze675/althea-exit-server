@@ -14,5 +14,8 @@ RUN apt update
 RUN apt install python3-pip libsqlite3-dev libssl-dev build-essential -y
 RUN pip3 install ansible
 
+# Install hosts file template and Ansible playbook for exit nodes
+RUN git clone https://github.com/althea-net/rita-installer.git
+
  # Expose Port for the Application 
 EXPOSE 4875 51820
