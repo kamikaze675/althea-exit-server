@@ -1,0 +1,31 @@
+[exit]
+1.1.1.1 description="My Exit Primary!" primary=True  wg_private_key="" wg_public_key=""
+2.2.2.2 description="My Exit Secondary!"               wg_private_key="" wg_public_key=""
+[exit:vars]
+eth_private_key = ""
+fee_multiplier = 20
+mailer=True
+email_address=""
+smtp_url=""
+smtp_domain=""
+smtp_username=""
+smtp_password=""
+balance_notification_interval=86400
+balance_notification_body="Your Althea router has a low balance! Your service will be slow until more funds are added. Visit althea.net/top-up"
+database_uri=""
+external_nic=""
+system_chain="Rinkeby"
+full_nodes=["https://rinkeby.infura.io/v3/174d2ebf288a452fab8a8f90eab57be7"]
+#system_chain="Ethereum"
+#full_nodes=["https://eth.althea.org:443", "https://mainnet.infura.io/v3/
+6b080f02d7004a8394444cdf232a7081"]
+#system_chain="Xdai"
+#full_nodes=["https://dai.althea.org:443"]
+exit_mesh_ip="fd00::xxxxx"
+wg_exit_public_key=""
+wg_exit_private_key=""
+allowed_country_codes="[]"
+exit_price_wei = 714000
+standalone = true
+entry_timeout = "86400"
+debt_limit = false
