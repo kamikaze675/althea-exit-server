@@ -11,7 +11,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install Ansible
 RUN apt update
-RUN apt install python3-pip libsqlite3-dev libssl-dev build-essential -y
+RUN apt install python3-pip libsqlite3-dev libssl-dev build-essential curl -y
 RUN pip3 install ansible
 
 # Install hosts file template and Ansible playbook for exit nodes
