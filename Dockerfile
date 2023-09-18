@@ -20,10 +20,9 @@ ADD start.sh .
 ADD rita_exit.toml .
 ADD babeld.conf .
 
-
  # Expose Ports for babel, rita, bounty and wg
-EXPOSE 22/tcp 8080 4876/udp 8888/udp 59999/udp
-EXPOSE 60000-65000/udp
+EXPOSE 4874-4877/udp 59999/udp
+EXPOSE 59998-64998/udp
 
  # Grab the current public ip address for the host config, run the Althea setup exit server playbook
 ENTRYPOINT /bin/bash start.sh
