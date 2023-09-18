@@ -1,0 +1,70 @@
+db_uri = "replace with your db"
+workers = 6
+description = "Dockerized Althea exit"
+allowed_countries = [""]
+remote_log = false
+
+[payment]
+max_fee = 500000000
+local_fee = 0
+eth_private_key = "replace with your private key"
+node_list = ["https://dai.althea.net:443"]
+buffer_period = 3
+system_chain = "Xdai"
+bridge_enabled = true
+debt_limit_enabled = true
+apply_incoming_credit_immediately = true
+forgive_on_reboot = false
+free_tier_throughput = 10000
+
+[network]
+nickname = "Dockerized Exit"
+mesh_ip = "fd00::1245:abc"
+mesh_ip_v2 = "fd00::1245:abc"
+babel_port = 6872
+rita_contact_port = 4874
+rita_hello_port = 4876
+rita_dashboard_port = 4877
+rita_tick_interval = 5
+wg_private_key_path = "/tmp/priv"
+wg_start_port = 60000
+peer_interfaces = [eth0]
+manual_peers = []
+external_nic = "eth0"
+conf_link_local = true
+default_route = []
+wg_private_key = "replace with your key #1"
+wg_public_key = "replace with your key #1"
+
+[network.shaper_settings]
+enabled = false
+max_speed = 10000
+min_speed = 500
+
+[exit_network]
+wg_private_key_path = "/tmp/exit-priv"
+wg_private_key = "replace with your key #2"
+wg_public_key = "replace with your key #2"
+wg_tunnel_port = 59999
+wg_v2_tunnel_port = 59998
+exit_hello_port = 4875
+exit_start_ip = "172.168.0.100"
+exit_price = 150000000
+own_internal_ip = "172.168.0.254"
+netmask = 16
+client_subnet_size = 60
+recompute_ipv6 = false
+pass = "none"
+enable_enforcement = true
+
+[[exit_network.cluster_exits]]
+mesh_ip = "fd00::1245:abc"
+eth_address = "your eth public key"
+wg_public_key = "your wg key"
+
+[dao]
+oracle_enabled = false
+cache_timeout_seconds = 600
+node_list = ["https://eth.althea.net:443"]
+dao_addresses = []
+oracle_url = ""

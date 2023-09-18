@@ -5,9 +5,11 @@ These steps should get you to the point the exit server runs, be aware it is usi
 
 You need to have docker installed, "sudo apt install docker.io" and then verify docker works with "docker run hello-world"
 
-#To create the docker build file use:
- sudo docker build -t althea-exit-server-image .
+First edit `rita_exit.toml` with your wireguard and Eth keys
 
-#Then to kick off an interactive session
-sudo docker run -t -i --privileged althea-exit-server-image
+# Build the docker image
+docker build -t althea-exit-server-image .
+
+# Start a session
+docker run -t -i --privileged althea-exit-server-image
 
